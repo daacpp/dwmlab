@@ -48,18 +48,10 @@ def predict(node, instance):
     else:
         return predict(node.children[instance[node.attribute]], instance)
 
-# Define the dataset
-data = {
-    'day': list(range(1, 15)),
-    'outlook': ['sunny', 'sunny', 'overcast', 'rain', 'rain', 'rain', 'overcast', 'sunny', 'sunny', 'rain', 'sunny', 'overcast', 'overcast', 'rain'],
-    'temperature': ['hot', 'hot', 'hot', 'mild', 'cool', 'cool', 'cool', 'mild', 'cool', 'mild', 'mild', 'mild', 'hot', 'mild'],
-    'humidity': ['high', 'high', 'high', 'high', 'normal', 'normal', 'normal', 'high', 'normal', 'normal', 'normal', 'high', 'normal', 'high'],
-    'wind': ['weak', 'strong', 'weak', 'weak', 'weak', 'strong', 'strong', 'weak', 'weak', 'weak', 'strong', 'strong', 'weak', 'strong'],
-    'playing': ['no', 'no', 'yes', 'yes', 'yes', 'no', 'yes', 'no', 'yes', 'yes', 'yes', 'yes', 'yes', 'no']
-}
+
 
 # Convert to DataFrame
-df = pd.DataFrame(data)
+df = pd.read_csv("one.csv")
 
 # Define attributes and target attribute
 attributes = df.columns[1:-1]

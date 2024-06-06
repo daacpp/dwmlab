@@ -3,12 +3,7 @@ from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 
 
-# Create the dataset
-data = {
-    'id': [1, 2, 3, 4, 5, 6, 7],
-    'var1': [1.0, 1.5, 3.0, 5.0, 3.5, 4.5, 3.5],
-    'var2': [1.0, 2.0, 4.0, 7.0, 5.0, 5.0, 4.5]
-}
+
 
 # Convert to DataFrame
 df = pd.read_csv("two.csv")
